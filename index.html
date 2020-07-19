@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title> St. Joseph's co-ed School </title>
+		
+		<!-- Fonts' Link -->
+        <link href="https://fonts.googleapis.com/css?family=Germania+One" rel="stylesheet">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+		
+		<style>
+			
+		* {
+			outline: none;
+			padding: 0;
+			margin: 0;
+		}
+		
+		a {
+			outline: none !important;
+		}
+		
+		body {
+			background-color: #F5F5F5;
+			color: #555;
+			font-size: 1.1em;
+			font-family: Arial, Helvetica, sans-serif;
+			outline: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.header{
+			margin-top:0;
+			background:#222222;
+		}
+
+		.statusbar{
+			margin-left:0;
+		}
+		nav ul {
+			-webkit-font-smoothing: antialiased;
+			list-style: none;
+			margin : none;
+			padding: 0;
+			width: 100%;
+		}
+		
+		nav li {
+			float:left;
+			margin : 0.5%;
+			padding: 0;
+			position: relative;
+		}
+		nav a {
+			color: #FFFFFF;
+			display: block;
+			font: normal 13px/50px Arial, Helvetica, sans-serif;
+			padding: 0 25px;
+			text-align: center;
+			text-decoration: none;
+			-webkit-transition: all .25s ease;
+			-moz-transition: all .25s ease;
+			-ms-transition: all .25s ease;
+			-o-transition: all .25s ease;
+			transition: all .25s ease;
+		}
+		nav .dropdown {
+			background:url('../images/arrow.jpg') no-repeat right center;
+		}
+		nav li:hover a {
+			background: #088b03;
+			color:#FFF;
+		}
+		nav li ul {
+			float: left;
+			left: 0;
+			width:150%;
+			opacity: 0;
+			position: absolute;
+			top: 35px;
+			visibility: hidden;
+			z-index: 1;
+			-webkit-transition: all .25s ease;
+			-moz-transition: all .25s ease;
+			-ms-transition: all .25s ease;
+			-o-transition: all .25s ease;
+			transition: all .25s ease;
+		}
+		nav li:hover ul {
+			opacity: 1;
+			top: 50px;
+			visibility: visible;
+		}
+		nav li ul li {
+			float: none;
+			width: 100%;
+		}
+		nav li ul a:hover {
+			background: #bbb;
+		}
+		/* Clearfix */
+		.cf:after, .cf:before {
+			content: "";
+			display: table;
+		}
+		.cf:after {
+			clear: both;
+		}
+
+		
+		#logoIN
+		{
+			background-color: #F5F5F5;
+			margin-top:2%;
+			margin-left:1%;
+            height: 10%;
+            width: 10%;
+		}
+		
+		.logo
+		{
+			margin-top:-2.95%;
+			font-size:300%;
+			font-family:Palatino Linotype;
+			color:darkgreen;
+			margin-left:0;
+		}
+		
+        /* Slideshow container */
+		.slideshow-container {
+		  max-width: 100%;
+		  position: relative;
+		  margin-top:0;
+		  margin-left:2px;
+          padding-left: 1.5%;
+          padding-right: 1.5%;
+          height: 8%;
+		}
+		
+		/* The dots/bullets/indicators */
+		.dot {
+		  height: 5%;
+		  width: 5%;
+		  margin-top: 1%;
+		  background-color: #bbb;
+		  border-radius: 50%;
+		  display: inline-block;
+		  transition: background-color 0.6s ease;
+		}
+		
+		.active {
+		  background-color: #717171;
+		}
+		
+		/* Fading animation */
+		.fade {
+		  -webkit-animation-name: fade;
+		  -webkit-animation-duration: 2.5s;
+		  animation-name: fade;
+		  animation-duration: 2s;
+		}
+		
+		@-webkit-keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+		
+		@keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+		
+		/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 300px) {
+		  .text {font-size: 11px}
+		}
+
+
+		.contact
+		{
+			height:265px;
+			width:1345px;
+			border-radius: 1345px 1345px 0px 0px;
+			background:#8F9092;
+		}
+		
+		.image
+		{
+			width:200px;
+			height:200px;
+			margin-left:600px;
+			margin-top:-70px;
+			border-radius : 80px 80px 80px 80px;
+		}
+		
+		.contacts
+		{
+			margin-left:200px;
+			padding: 0px 30px 0px 0px;
+		}
+		
+		.phone
+		{
+			margin-top:-115px;
+			text-align: right;
+			margin-right:180px;
+		}
+				
+		</style>
+    </head>
+
+    <body>
+        <div style="background-color: darkgreen; color: #FFFFFF; margin: 0%; height: 15%; width: 100%;text-align: start;" class="col-lg-12">
+            <div style="width: 10%;height: 100%;top: 0%;" class="col-lg-4">
+                <a href="index.html">
+                <img id="logoIn" src="Images/logo.png" width="100%" 	height="10%" style="border:none;margin-left: 0%;"> </a>
+            </div>
+            
+   
+            <div class="logo" class="col-lg-8"  style="border:none; color: #FFFFFF;text-align: center;padding-top:5% ;margin-left: 5%;">
+                <p style="margin-left:18%;"><strong> St Joseph's Co-Ed School, Bhopal </strong></p>
+            
+            </div>
+        </div>
+		
+     <div class="header">  
+        <nav>
+            <ul class="cf">
+				<li class="statusbar"><a href="index.html">Home</a>
+				</li>
+				
+                <li class="statusbar"><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp About Us</a>
+                    <ul>
+                        <li><a href="index.html">Brief History</a></li>
+                        <li><a href="#">Principal's Desk</a></li>
+                        <li><a href="#">Vision & Mission</a></li>
+                        <li><a href="index.html">Facilities</a></li>
+                        <li><a href="#">Awards</a></li>
+                        <li class><a href="#">School Information </a></li>
+                    </ul>
+                </li>
+                
+                <li class="statusbar"><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Academics</a>
+                    <ul>
+                        <li><a href="index.html">Curriculum</a></li>
+                        <li><a href="#">Examination & Promotion</a></li>
+                        <li><a href="#">Co-Curricular Activities</a></li>
+                        <li><a href="index.html">Admission and Withdrawal</a></li>
+                        <li><a href="#">Exposure Programmes</a></li>
+                        <li><a href="#">Teacher Incharges </a></li>
+                        <li><a href="#">Rules and regulations</a></li>
+                        <li><a href="#">Time table</a></li>
+                        <li><a href="index.html">Book-List 2020-2021</a></li>
+                        <li><a href="#" class="dropdown">Activity Calendar</a>
+                          <ul>
+                                <li class="status bar"><a href="#">Kinder Garten</a></li>
+                                <li class="statusbar"><a href="#">Primary</a></li>
+                                <li class="statusbar"><a href="#">Secondary</a></li>
+                          </ul>
+                        </li>
+                        
+                    </ul>
+                </li>
+
+                <li class="statusbar"><a href="index.html">Sports Corner</a>
+				</li>
+				
+                <li><a class="statusbar" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Student's Corner</a>
+                    <ul>
+                        <li><a href="studentReg.php" target="_blank">Registration form</a></li>
+                        <li><a href="studentInfo.php" target="_blank">Student Information</a></li>
+                        <li><a href="#">Clubs</a></li>
+                        <li><a href="#">EduTrips</a></li>
+                        <li><a href="#">Scholarships and Awards</a></li>
+                        <li><a href="#">Student Cabinet</a></li>
+                        <li><a href="#">Achievements</a></li>
+                    </ul>
+                </li>
+
+                <li><a class="statusbar" href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Login and Registration</a>
+                	<ul>
+                        <li><a href="#">School MIS</a></li>
+                        <li><a href="#">School Automation</a></li>
+                        <li><a href="teacherReg.php" target="_blank">Teacher's Registration</a></li>
+                        <li><a href="classReg.php" target="_blank">Classroom Registration</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Contact Us</a>
+				</li>
+
+            </ul>
+        </nav>
+    </div>	
+	
+	<div>
+	    <h1 style="text-align:center ; font-family:Times New Roman ; font-size:4rem ;font-style:bolder;color: darkolivegreen;">
+		<marquee width="100%" direction="left" height="12%" scrollamount="13">
+           <b> ONLINE REGISTRATION FOR SESSION 2020-21</b>
+            </marquee></h1>
+    </div>
+        <hr style="color: darkslategray;border: solid; height: 1.5%;" width="100%">
+        
+    <!-- slideshow section    -->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+           <img src="images/s1.jpg" style="width:90%;height:2%;margin-left: 5%; margin-right: 5%;">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="images/s2.jpg" style="width:80%;height:2%;margin-left: 5%;margin-right: 5%;">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="images/s3.jpg" style="width:80%;height:2%;margin-left: 5%; margin-right: 5%;">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/s4.jpg" style="width:80%;height:3%;margin-left: 5%; margin-right: 5%;">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/s5.jpg" style="width:80%;height:3%;margin-left: 5%;margin-right: 5%;">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/s6.jpg" style="width:80%;height:3%;margin-left: 5%; margin-right: 5%;">
+        </div>
+        
+        <div class="mySlides fade">
+            <img src="images/s7.jpg" style="width:80%;height:3%;margin-left: 5%; margin-right: 5%;"> 
+        </div>
+        
+    </div>
+    <br><br>
+
+    <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span>
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span>
+
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+    </div>
+
+    <div class="col-lg-12" style="background-color: olivedrab; height: 25%;">
+        <br><br><br><br>
+        <div class="col-lg-3" style="border-style: ridge;border-color: #FFFFFF;background-color: #FFFFFF; color: darkolivegreen; height: 18%; padding:8px;margin-left: 4%;">
+            <img src="images/div1.jpg" alt="our inspiration" width="100%" height="8%">
+            <br><br>
+            <h1 style="color: darkolivegreen;font-weight: bolder;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;">Our Mission & Vision</h1>
+            <br>
+            <p style="color: darkolivegreen;font-weight: bolder;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 1.5rem;text-align: justify;">
+                We, the members of Carmel Education family animated by our Guru Jesus Christ the teacher par
+                excellence, commit ourselves to competence, contemplation and character to form efficient, 
+                effective, empowered, enriched, spirit filled Carmelites who strive for excellence in knowledge
+                 and skill to lead and serve mankind for their own fulfillment and the progress of humanity.   [Read More...]<br><br><br><br><br>
+            </p>
+        </div>
+
+        <div class="col-lg-3" style="border-style: ridge;border-color: #FFFFFF;background-color: #FFFFFF; color: darkolivegreen; height: 18%; padding:8px;margin-left: 4%;">
+            <img src="images/d4.png" alt="our inspiration" width="100%" height="8%">
+            <br><br>
+            <h1 style="color: darkolivegreen;font-weight: bolder;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;">Our Inspiration</h1>
+            <br>
+            <p style="color: darkolivegreen;font-weight: bolder;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 1.5rem;text-align: justify;">
+                Our inspiration is Blessed Kuriakose Elias Chavara, the founder Father of the congregation 
+                of the Mother of Carmel which manages the institution.He was a man of God and a pioneering
+                visionary of education in Kerala in the 19th century. He was versatile genius. vibrant 
+                educationalist in Kerala in the 19th century. He brought about effective pedagogical 
+                tradition breaking the barriers of illiteracy, casteism, injustice and corruption and 
+                radiating the effulgence of knowledge, wisdom, goodness and godliness.  [Read More...]
+            </p>
+            <br>
+        </div>
+        <div class="col-lg-3" style="border-style: ridge;border-color: #FFFFFF;background-color: #FFFFFF; color: darkolivegreen; height: 18%; padding:8px;margin-left: 4%;margin-bottom: 1.5%;">
+            <img src="images/d3.jpg" alt="our inspiration" width="100%" height="8%">
+            <br><br>
+            <h1 style="color: darkolivegreen;font-weight: bolder;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;">Awards & Scholarships</h1>
+            <br>
+            <p style="color: darkolivegreen;font-weight: bolder;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 1.5rem;text-align: justify;">
+                Attractive prizes are given to one boy and one girl for outstanding performance in sports. Prizes
+                for the best performances in Dance, Music, Debate, Art and other activities are given at the end
+                of the session. Carmel Scholarship instituted by the Management is awarded to the allrounder of 
+                the outgoing batch every year. Mr. A Savari Muthu memorial prize sponsored by Rev. Fr. Abraham Michel
+                is given to the students in recognition to their meritorious academic performance along with good 
+                behaviour, discipline, cleanliness, punctuality etc..  [Read More...]
+            </p>
+            <br>
+        </div>
+        <br><br><br>
+        <hr style="border-color: darkolivegreen;"><hr style="border-color: darkolivegreen;"><hr style="border-color: darkolivegreen;">
+        <br><br><br>
+     </div>
+
+     <div style="height: 45%;margin-left: auto;margin-right: auto; margin-top:2% ;padding-left: 2%" class="col-lg-12">
+        <div class="col-lg-6" style="width: 60%;padding-left: 2%;margin-left: auto;margin-right: auto;">
+            <h1 style="font-size: 300%;font-weight: bolder;font: outline;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">WELCOME TO St. JOSEPH CO-ED SCHOOL</h1>
+            <br><br>
+            <img src="images/school.jpg" alt="school image" height="4%" width="80%">
+            <br>
+            <p style="color:darkgoldenrod;font-size: 220%;text-align: justify;width: 80%;">
+                Carmel Convent School was established by the Sisters of the Congregation of Mother of Carmel (C.M.C.) 
+                in 1968. C.M.C. is an indigenous religious congregation of sisters who dedicate their lives for the 
+                upliftment and the<br>Read More...
+            </p>
+        </div>
+        <div class="col-lg-4" style="width: 40%;padding-left: 4%; margin-right: auto;margin-left: 6%; border: darkgray;border-style: inset;background-color: aliceblue;">
+            <br><h1><b>Latest News</b></h1><br><hr><hr>
+            <ul>
+                <li>6th July 2020 <i>INTER HOUSE BASKETBALL COMPETITION</i><br>Read More..</li><hr>
+                <li>15th July 2020 <i>St. Joseph's Day-2020</i><br>Read More..</li><hr>
+                <li>2nd Aug 2020 <i>Tree Plantation drive</i><br>Read More..</li><hr>
+                <li>15th Aug 2020 <i>INDEPENDENCE DAY CELEBRATION</i><br>Read More..</li><hr>
+                <li>28th Aug 2020 <i>INTER SCHOOL DEBATE COMPETITION SAHODYA COMPLEX</i><br>Read More..</li><hr>
+                <li>31st Aug 2020 <i>REPORT ON SWACCHATA ABHIYAN</i><br>Read More..</li><hr>
+
+            </ul>
+        </div>   
+     </div>
+
+     <div style="height: 45%;margin-left: auto;margin-right: auto; margin-top:3% ;padding-left: 2%; background-color: darkolivegreen;color: #FFFFFF;" class="col-lg-12">
+        <div class="col-lg-5" style="padding-left: 2%;margin-left: auto;margin-right: auto;">
+            <h1 style="font-size: 300%;font-weight: bolder;font: outline;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">GALLERY</h1>
+            <br><br>
+            <table style="padding:2%;width: 90%;margin-left: 2%;border-style: double;border-width: 4px;">
+                <tr>
+                    <td style="padding:3%;"><img src="images/g1.jpg" height="50%" width="100%"></td>
+                    <td style="padding:3%;"><img src="images/g2.jpg" height="50%" width="100%"></td>
+                </tr>
+                <tr>
+                    <td style="padding:3%;"><img src="images/g3.jpg" height="50%" width="100%"></td>
+                    <td style="padding:3%;"><img src="images/g4.jpg" height="50%" width="100%"></td>
+                </tr>
+                <tr colspan="2">
+                    <form>
+                        <input type="submit" value="View" style="color: black;width: 10%;">
+                    </form>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-6" style="padding-left: 4%; margin-right: auto;margin-left: 4%;">
+            <br><h1><b>CALENDAR AND EVENTS</b></h1><br><hr>
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FKolkata&amp;src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%230B8043" style="border:solid 1px #777" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+        </div>
+     </div>
+
+     <div class="col-lg-12" style="margin-top: 4%;background-color: lightgrey;margin-top: 4%;">
+        <h1 style="text-align: center;font-weight: bolder;"><b>CONTACT US</b></b></h1>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.209488792221!2d77.38052341480567!3d23.271836584827412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c680b0ad912a7%3A0xbe89bb655f36b09d!2sSaint%20Josephs%20Convent%20Girls%20School!5e0!3m2!1sen!2sin!4v1592608619788!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+     </div>
+    
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     
+     
+	<br><br>
+	
+	<div class="contact" style="margin-top: 70%;">
+	
+		<img class="image" src="images/logo.png">
+	
+		<h1 class="contacts"> Address </h1>
+		<p class="contacts"> E-6, Arera Colony, <br>
+            Bhopal<br>
+			Madhya Pradesh - 466114 
+		</p>
+		
+		<div  class="phone">
+			<h2 style="font-size:30px; margin-right:80px"> Contacts </h2>
+			<p> You may contact us at our <br>info@stjosephcoed.org <br>Following phone numbers: <br>
+							<span style="margin-right:65px"> 0755 - 2565434   </span>  <br> 
+							<span style="margin-right:25px"> 0755 - 4295084 </span>
+			</p>
+		</div>
+		
+	</div>
+	
+	</body>
+
+
+
+</html>
